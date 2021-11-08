@@ -38,12 +38,12 @@ function account(e){
       
 }
 function calculate(){
-   smallText.innerHTML = bigText.innerHTML
+      smallText.innerHTML = bigText.innerHTML
       let r = eval(bigText.innerHTML.toString())
-         bigText.innerHTML = r
-         enteredValue1 = r
-         catchSymbol = ''
-      }
+      bigText.innerHTML = r
+      enteredValue1 = r
+      catchSymbol = ''
+   }
 
 function clean(w: string){
    if(w == 'clear'){
