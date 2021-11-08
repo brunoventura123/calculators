@@ -34,10 +34,20 @@ function account(e) {
     }
 }
 function calculate() {
+    var r = 0;
+    if (catchSymbol === '%') {
+        r = Number(enteredValue2) / 100 * Number(enteredValue1);
+    }
+    else {
+        smallText.innerHTML = bigText.innerHTML;
+        r = eval(bigText.innerHTML.toString());
+        bigText.innerHTML = r.toString();
+        enteredValue1 = r.toString();
+        catchSymbol = '';
+    }
     smallText.innerHTML = bigText.innerHTML;
-    var r = eval(bigText.innerHTML.toString());
-    bigText.innerHTML = r;
-    enteredValue1 = r;
+    bigText.innerHTML = r.toString();
+    enteredValue1 = r.toString();
     catchSymbol = '';
 }
 function clean(w) {
