@@ -38,31 +38,14 @@ function account(e){
       
 }
 function calculate(){
-   let show = 0
    smallText.innerHTML = bigText.innerHTML
-   switch(catchSymbol){
-      case '+':
-         show = Number(enteredValue2) + Number(enteredValue1)
-         break;
-      case '-':
-         show = Number(enteredValue2) - Number(enteredValue1)
-         break;
-      case '*':
-         show = Number(enteredValue2) * Number(enteredValue1)
-         break;
-      case '/':
-         show = Number(enteredValue2) / Number(enteredValue1)
-         break;
-      case '%':
-         show = Number(enteredValue2) / 100 * Number(enteredValue1)
-         break;
-      }
-         bigText.innerHTML = show.toString()
-         enteredValue1 = show.toString()
+      let r = eval(bigText.innerHTML.toString())
+         bigText.innerHTML = r
+         enteredValue1 = r
          catchSymbol = ''
       }
 
-function clean(w:string){
+function clean(w: string){
    if(w == 'clear'){
       bigText.innerHTML = ''
       smallText.innerHTML =''
